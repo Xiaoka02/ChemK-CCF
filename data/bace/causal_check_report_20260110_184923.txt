@@ -1,0 +1,543 @@
+Found 6 Causal_Analysis files under data\bace
+================================================================================
+FILE: data\bace\Causal_Analysis_bace.csv
+rows: 382
+columns: ['original_smiles', 'intervened_smiles', 'intervention_strategy', 'original_molecule_idx', 'original_prediction', 'intervened_prediction', 'prediction_difference', 'abs_prediction_difference', 'original_probability', 'intervened_probability', 'probability_difference', 'original_logp', 'intervened_logp', 'logp_difference']
+dtypes:
+{'original_smiles': dtype('O'), 'intervened_smiles': dtype('O'), 'intervention_strategy': dtype('O'), 'original_molecule_idx': dtype('int64'), 'original_prediction': dtype('float64'), 'intervened_prediction': dtype('float64'), 'prediction_difference': dtype('float64'), 'abs_prediction_difference': dtype('float64'), 'original_probability': dtype('float64'), 'intervened_probability': dtype('float64'), 'probability_difference': dtype('float64'), 'original_logp': dtype('float64'), 'intervened_logp': dtype('float64'), 'logp_difference': dtype('float64')}
+--- column: probability_difference ---
+dtype: float64, nulls: 0
+{'count': 382.0, 'mean': 0.0003421108448068484, 'std': 0.002438748547362612, 'min': -0.0106603801250457, '25%': -0.000983856618404325, '50%': 0.0001723170280456, '75%': 0.001891687512397725, 'max': 0.0127588212490081}
+unique_count: 382
+all_zero: False
+--- column: prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 382.0, 'mean': 0.0003421108448068484, 'std': 0.002438748547362612, 'min': -0.0106603801250457, '25%': -0.000983856618404325, '50%': 0.0001723170280456, '75%': 0.001891687512397725, 'max': 0.0127588212490081}
+unique_count: 382
+all_zero: False
+--- column: abs_prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 382.0, 'mean': 0.001791053417465402, 'std': 0.00168776465832367, 'min': 9.98377799987793e-06, '25%': 0.0005734413862228, '50%': 0.0013811439275741, '75%': 0.002505272626876775, 'max': 0.0127588212490081}
+unique_count: 381
+all_zero: False
+--- column: original_probability ---
+dtype: float64, nulls: 0
+{'count': 382.0, 'mean': 0.46745281826451185, 'std': 0.010653103440733343, 'min': 0.4507058262825012, '25%': 0.45839089155197144, '50%': 0.46649882197380066, '75%': 0.4733677878975868, 'max': 0.4971798956394195}
+unique_count: 382
+all_zero: False
+--- column: intervened_probability ---
+dtype: float64, nulls: 0
+{'count': 382.0, 'mean': 0.4677949291093187, 'std': 0.010702573549075944, 'min': 0.4519603252410888, '25%': 0.4581584632396698, '50%': 0.4671746790409088, '75%': 0.4727379381656646, 'max': 0.4933714866638183}
+unique_count: 382
+all_zero: False
+--- column: original_prediction ---
+dtype: float64, nulls: 0
+{'count': 382.0, 'mean': 0.46745281826451185, 'std': 0.010653103440733343, 'min': 0.4507058262825012, '25%': 0.45839089155197144, '50%': 0.46649882197380066, '75%': 0.4733677878975868, 'max': 0.4971798956394195}
+unique_count: 382
+all_zero: False
+--- column: intervened_prediction ---
+dtype: float64, nulls: 0
+{'count': 382.0, 'mean': 0.4677949291093187, 'std': 0.010702573549075944, 'min': 0.4519603252410888, '25%': 0.4581584632396698, '50%': 0.4671746790409088, '75%': 0.4727379381656646, 'max': 0.4933714866638183}
+unique_count: 382
+all_zero: False
+--- column: intervention_strategy ---
+dtype: object, nulls: 0
+non-numeric after coercion: 382 / 382
+--- column: original_molecule_idx ---
+dtype: int64, nulls: 0
+{'count': 382.0, 'mean': 830.8638743455498, 'std': 403.2930683838644, 'min': 5.0, '25%': 548.0, '50%': 834.5, '75%': 1131.0, 'max': 1512.0}
+unique_count: 285
+all_zero: False
+Top abs_prediction_difference samples:
+ original_molecule_idx intervention_strategy  abs_prediction_difference
+                   994           sulfonamide                   0.012759
+                     5       fluoro_aromatic                   0.010660
+                   257       fluoro_aromatic                   0.010628
+                   413       fluoro_aromatic                   0.008082
+                   151       fluoro_aromatic                   0.006998
+                  1122       fluoro_aromatic                   0.006514
+                   491       fluoro_aromatic                   0.006334
+                   486       fluoro_aromatic                   0.006182
+                   742       fluoro_aromatic                   0.006064
+                   104       fluoro_aromatic                   0.005904
+Top probability_difference samples:
+ original_molecule_idx intervention_strategy  probability_difference
+                   994           sulfonamide                0.012759
+                     5       fluoro_aromatic               -0.010660
+                   257       fluoro_aromatic               -0.010628
+                   413       fluoro_aromatic               -0.008082
+                   151       fluoro_aromatic                0.006998
+                  1122       fluoro_aromatic                0.006514
+                   491       fluoro_aromatic                0.006334
+                   486       fluoro_aromatic                0.006182
+                   742       fluoro_aromatic                0.006064
+                   104       fluoro_aromatic               -0.005904
+per-strategy counts: {'fluoro_aromatic': 244, 'aromatic_chloro': 99, 'carboxylic_acid': 14, 'hydroxyl': 10, 'amide': 9, 'sulfonamide': 6}
+================================================================================
+FILE: data\bace\Causal_Analysis_bace_run0.csv
+rows: 76
+columns: ['original_smiles', 'intervened_smiles', 'intervention_strategy', 'original_molecule_idx', 'original_prediction', 'intervened_prediction', 'prediction_difference', 'abs_prediction_difference', 'original_probability', 'intervened_probability', 'probability_difference', 'original_logp', 'intervened_logp', 'logp_difference']
+dtypes:
+{'original_smiles': dtype('O'), 'intervened_smiles': dtype('O'), 'intervention_strategy': dtype('O'), 'original_molecule_idx': dtype('int64'), 'original_prediction': dtype('float64'), 'intervened_prediction': dtype('float64'), 'prediction_difference': dtype('float64'), 'abs_prediction_difference': dtype('float64'), 'original_probability': dtype('float64'), 'intervened_probability': dtype('float64'), 'probability_difference': dtype('float64'), 'original_logp': dtype('float64'), 'intervened_logp': dtype('float64'), 'logp_difference': dtype('float64')}
+--- column: probability_difference ---
+dtype: float64, nulls: 0
+{'count': 76.0, 'mean': 0.0009873278046909045, 'std': 0.002786200969027518, 'min': -0.0106282234191894, '25%': -0.0007071122527122, '50%': 0.00080393254756925, '75%': 0.002869635820388775, 'max': 0.0069976449012756}
+unique_count: 76
+all_zero: False
+--- column: prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 76.0, 'mean': 0.0009873278046909045, 'std': 0.002786200969027518, 'min': -0.0106282234191894, '25%': -0.0007071122527122, '50%': 0.00080393254756925, '75%': 0.002869635820388775, 'max': 0.0069976449012756}
+unique_count: 76
+all_zero: False
+--- column: abs_prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 76.0, 'mean': 0.002247214709457554, 'std': 0.0019061538884806988, 'min': 9.98377799987793e-06, '25%': 0.00075475871562955, '50%': 0.0019344687461852498, '75%': 0.003290265798568675, 'max': 0.0106282234191894}
+unique_count: 76
+all_zero: False
+--- column: original_probability ---
+dtype: float64, nulls: 0
+{'count': 76.0, 'mean': 0.4845790886565259, 'std': 0.003999172630277725, 'min': 0.4773464202880859, '25%': 0.48152152448892593, '50%': 0.48431622982025146, '75%': 0.4870660677552223, 'max': 0.4971798956394195}
+unique_count: 76
+all_zero: False
+--- column: intervened_probability ---
+dtype: float64, nulls: 0
+{'count': 76.0, 'mean': 0.4855664164612168, 'std': 0.0030213775374162226, 'min': 0.4797263443470001, '25%': 0.4832814484834671, '50%': 0.4855164885520935, '75%': 0.4878848642110824, 'max': 0.4933714866638183}
+unique_count: 76
+all_zero: False
+--- column: original_prediction ---
+dtype: float64, nulls: 0
+{'count': 76.0, 'mean': 0.4845790886565259, 'std': 0.003999172630277725, 'min': 0.4773464202880859, '25%': 0.48152152448892593, '50%': 0.48431622982025146, '75%': 0.4870660677552223, 'max': 0.4971798956394195}
+unique_count: 76
+all_zero: False
+--- column: intervened_prediction ---
+dtype: float64, nulls: 0
+{'count': 76.0, 'mean': 0.4855664164612168, 'std': 0.0030213775374162226, 'min': 0.4797263443470001, '25%': 0.4832814484834671, '50%': 0.4855164885520935, '75%': 0.4878848642110824, 'max': 0.4933714866638183}
+unique_count: 76
+all_zero: False
+--- column: intervention_strategy ---
+dtype: object, nulls: 0
+non-numeric after coercion: 76 / 76
+--- column: original_molecule_idx ---
+dtype: int64, nulls: 0
+{'count': 76.0, 'mean': 799.0657894736842, 'std': 401.5584751283036, 'min': 7.0, '25%': 533.0, '50%': 925.5, '75%': 1121.25, 'max': 1509.0}
+unique_count: 66
+all_zero: False
+Top abs_prediction_difference samples:
+ original_molecule_idx intervention_strategy  abs_prediction_difference
+                   257       fluoro_aromatic                   0.010628
+                   151       fluoro_aromatic                   0.006998
+                  1122       fluoro_aromatic                   0.006514
+                   742       fluoro_aromatic                   0.006064
+                   405       fluoro_aromatic                   0.005196
+                   527       fluoro_aromatic                   0.005036
+                  1191       fluoro_aromatic                   0.004838
+                   630       fluoro_aromatic                   0.004708
+                  1247       fluoro_aromatic                   0.004484
+                  1277       fluoro_aromatic                   0.004395
+Top probability_difference samples:
+ original_molecule_idx intervention_strategy  probability_difference
+                   257       fluoro_aromatic               -0.010628
+                   151       fluoro_aromatic                0.006998
+                  1122       fluoro_aromatic                0.006514
+                   742       fluoro_aromatic                0.006064
+                   405       fluoro_aromatic               -0.005196
+                   527       fluoro_aromatic                0.005036
+                  1191       fluoro_aromatic                0.004838
+                   630       fluoro_aromatic                0.004708
+                  1247       fluoro_aromatic                0.004484
+                  1277       fluoro_aromatic                0.004395
+per-strategy counts: {'fluoro_aromatic': 50, 'aromatic_chloro': 18, 'carboxylic_acid': 4, 'hydroxyl': 2, 'sulfonamide': 2}
+================================================================================
+FILE: data\bace\Causal_Analysis_bace_run1.csv
+rows: 88
+columns: ['original_smiles', 'intervened_smiles', 'intervention_strategy', 'original_molecule_idx', 'original_prediction', 'intervened_prediction', 'prediction_difference', 'abs_prediction_difference', 'original_probability', 'intervened_probability', 'probability_difference', 'original_logp', 'intervened_logp', 'logp_difference']
+dtypes:
+{'original_smiles': dtype('O'), 'intervened_smiles': dtype('O'), 'intervention_strategy': dtype('O'), 'original_molecule_idx': dtype('int64'), 'original_prediction': dtype('float64'), 'intervened_prediction': dtype('float64'), 'prediction_difference': dtype('float64'), 'abs_prediction_difference': dtype('float64'), 'original_probability': dtype('float64'), 'intervened_probability': dtype('float64'), 'probability_difference': dtype('float64'), 'original_logp': dtype('float64'), 'intervened_logp': dtype('float64'), 'logp_difference': dtype('float64')}
+--- column: probability_difference ---
+dtype: float64, nulls: 0
+{'count': 88.0, 'mean': 5.495615980842389e-05, 'std': 0.002051976649121947, 'min': -0.0053344070911407, '25%': -0.00086314231157295, '50%': -4.197657108306885e-05, '75%': 0.001314043998718175, 'max': 0.0046999752521514}
+unique_count: 88
+all_zero: False
+--- column: prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 88.0, 'mean': 5.495615980842389e-05, 'std': 0.002051976649121947, 'min': -0.0053344070911407, '25%': -0.00086314231157295, '50%': -4.197657108306885e-05, '75%': 0.001314043998718175, 'max': 0.0046999752521514}
+unique_count: 88
+all_zero: False
+--- column: abs_prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 88.0, 'mean': 0.001530965620821124, 'std': 0.0013575221766619486, 'min': 1.809000968933105e-05, '25%': 0.000401370227336825, '50%': 0.0010275840759277001, '75%': 0.0023275017738341747, 'max': 0.0053344070911407}
+unique_count: 88
+all_zero: False
+--- column: original_probability ---
+dtype: float64, nulls: 0
+{'count': 88.0, 'mean': 0.46736127815463324, 'std': 0.0028920501335299342, 'min': 0.4633850753307342, '25%': 0.46519346535205836, '50%': 0.46660034358501434, '75%': 0.46926669031381607, 'max': 0.4748699069023132}
+unique_count: 88
+all_zero: False
+--- column: intervened_probability ---
+dtype: float64, nulls: 0
+{'count': 88.0, 'mean': 0.4674162343144417, 'std': 0.002225080161626992, 'min': 0.4636331796646118, '25%': 0.4658915549516678, '50%': 0.4672686606645584, '75%': 0.4685101211071014, 'max': 0.4739874899387359}
+unique_count: 88
+all_zero: False
+--- column: original_prediction ---
+dtype: float64, nulls: 0
+{'count': 88.0, 'mean': 0.46736127815463324, 'std': 0.0028920501335299342, 'min': 0.4633850753307342, '25%': 0.46519346535205836, '50%': 0.46660034358501434, '75%': 0.46926669031381607, 'max': 0.4748699069023132}
+unique_count: 88
+all_zero: False
+--- column: intervened_prediction ---
+dtype: float64, nulls: 0
+{'count': 88.0, 'mean': 0.4674162343144417, 'std': 0.002225080161626992, 'min': 0.4636331796646118, '25%': 0.4658915549516678, '50%': 0.4672686606645584, '75%': 0.4685101211071014, 'max': 0.4739874899387359}
+unique_count: 88
+all_zero: False
+--- column: intervention_strategy ---
+dtype: object, nulls: 0
+non-numeric after coercion: 88 / 88
+--- column: original_molecule_idx ---
+dtype: int64, nulls: 0
+{'count': 88.0, 'mean': 798.4545454545455, 'std': 427.70321940236477, 'min': 20.0, '25%': 440.25, '50%': 815.5, '75%': 1126.5, 'max': 1496.0}
+unique_count: 79
+all_zero: False
+Top abs_prediction_difference samples:
+ original_molecule_idx intervention_strategy  abs_prediction_difference
+                   857       fluoro_aromatic                   0.005334
+                  1319       fluoro_aromatic                   0.004906
+                   322       fluoro_aromatic                   0.004700
+                  1338              hydroxyl                   0.004292
+                  1116       fluoro_aromatic                   0.004255
+                  1366       fluoro_aromatic                   0.004105
+                   149       fluoro_aromatic                   0.003911
+                  1068       fluoro_aromatic                   0.003719
+                  1347           sulfonamide                   0.003716
+                   111       fluoro_aromatic                   0.003592
+Top probability_difference samples:
+ original_molecule_idx intervention_strategy  probability_difference
+                   857       fluoro_aromatic               -0.005334
+                  1319       fluoro_aromatic               -0.004906
+                   322       fluoro_aromatic                0.004700
+                  1338              hydroxyl               -0.004292
+                  1116       fluoro_aromatic               -0.004255
+                  1366       fluoro_aromatic               -0.004105
+                   149       fluoro_aromatic                0.003911
+                  1068       fluoro_aromatic               -0.003719
+                  1347           sulfonamide                0.003716
+                   111       fluoro_aromatic                0.003592
+per-strategy counts: {'fluoro_aromatic': 55, 'aromatic_chloro': 21, 'carboxylic_acid': 4, 'hydroxyl': 4, 'amide': 3, 'sulfonamide': 1}
+================================================================================
+FILE: data\bace\Causal_Analysis_bace_run2.csv
+rows: 70
+columns: ['original_smiles', 'intervened_smiles', 'intervention_strategy', 'original_molecule_idx', 'original_prediction', 'intervened_prediction', 'prediction_difference', 'abs_prediction_difference', 'original_probability', 'intervened_probability', 'probability_difference', 'original_logp', 'intervened_logp', 'logp_difference']
+dtypes:
+{'original_smiles': dtype('O'), 'intervened_smiles': dtype('O'), 'intervention_strategy': dtype('O'), 'original_molecule_idx': dtype('int64'), 'original_prediction': dtype('float64'), 'intervened_prediction': dtype('float64'), 'prediction_difference': dtype('float64'), 'abs_prediction_difference': dtype('float64'), 'original_probability': dtype('float64'), 'intervened_probability': dtype('float64'), 'probability_difference': dtype('float64'), 'original_logp': dtype('float64'), 'intervened_logp': dtype('float64'), 'logp_difference': dtype('float64')}
+--- column: probability_difference ---
+dtype: float64, nulls: 0
+{'count': 70.0, 'mean': 0.0006899965660912553, 'std': 0.0032880751360911827, 'min': -0.0106603801250457, '25%': -0.0009399726986884249, '50%': 0.0007030367851257, '75%': 0.00228009372949595, 'max': 0.0127588212490081}
+unique_count: 70
+all_zero: False
+--- column: prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 70.0, 'mean': 0.0006899965660912553, 'std': 0.0032880751360911827, 'min': -0.0106603801250457, '25%': -0.0009399726986884249, '50%': 0.0007030367851257, '75%': 0.00228009372949595, 'max': 0.0127588212490081}
+unique_count: 70
+all_zero: False
+--- column: abs_prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 70.0, 'mean': 0.002379620500973241, 'std': 0.002355795616918213, 'min': 3.8176774978637695e-05, '25%': 0.000776804983615825, '50%': 0.0018708407878875, '75%': 0.002932943403720775, 'max': 0.0127588212490081}
+unique_count: 70
+all_zero: False
+--- column: original_probability ---
+dtype: float64, nulls: 0
+{'count': 70.0, 'mean': 0.4548541907753263, 'std': 0.002958768087087911, 'min': 0.4507058262825012, '25%': 0.45279978960752487, '50%': 0.4544642567634582, '75%': 0.45574791729450226, 'max': 0.4687912464141845}
+unique_count: 70
+all_zero: False
+--- column: intervened_probability ---
+dtype: float64, nulls: 0
+{'count': 70.0, 'mean': 0.4555441873414176, 'std': 0.0022922986499295, 'min': 0.4519603252410888, '25%': 0.4539856538176536, '50%': 0.4549987465143204, '75%': 0.4568572267889976, 'max': 0.4648338258266449}
+unique_count: 70
+all_zero: False
+--- column: original_prediction ---
+dtype: float64, nulls: 0
+{'count': 70.0, 'mean': 0.4548541907753263, 'std': 0.002958768087087911, 'min': 0.4507058262825012, '25%': 0.45279978960752487, '50%': 0.4544642567634582, '75%': 0.45574791729450226, 'max': 0.4687912464141845}
+unique_count: 70
+all_zero: False
+--- column: intervened_prediction ---
+dtype: float64, nulls: 0
+{'count': 70.0, 'mean': 0.4555441873414176, 'std': 0.0022922986499295, 'min': 0.4519603252410888, '25%': 0.4539856538176536, '50%': 0.4549987465143204, '75%': 0.4568572267889976, 'max': 0.4648338258266449}
+unique_count: 70
+all_zero: False
+--- column: intervention_strategy ---
+dtype: object, nulls: 0
+non-numeric after coercion: 70 / 70
+--- column: original_molecule_idx ---
+dtype: int64, nulls: 0
+{'count': 70.0, 'mean': 828.8285714285714, 'std': 393.5857077140508, 'min': 5.0, '25%': 597.25, '50%': 825.5, '75%': 1073.0, 'max': 1512.0}
+unique_count: 67
+all_zero: False
+Top abs_prediction_difference samples:
+ original_molecule_idx intervention_strategy  abs_prediction_difference
+                   994           sulfonamide                   0.012759
+                     5       fluoro_aromatic                   0.010660
+                   413       fluoro_aromatic                   0.008082
+                   491       fluoro_aromatic                   0.006334
+                   486       fluoro_aromatic                   0.006182
+                   104       fluoro_aromatic                   0.005904
+                   587       fluoro_aromatic                   0.005401
+                    48       fluoro_aromatic                   0.004881
+                   588       fluoro_aromatic                   0.004815
+                  1307       fluoro_aromatic                   0.004420
+Top probability_difference samples:
+ original_molecule_idx intervention_strategy  probability_difference
+                   994           sulfonamide                0.012759
+                     5       fluoro_aromatic               -0.010660
+                   413       fluoro_aromatic               -0.008082
+                   491       fluoro_aromatic                0.006334
+                   486       fluoro_aromatic                0.006182
+                   104       fluoro_aromatic               -0.005904
+                   587       fluoro_aromatic                0.005401
+                    48       fluoro_aromatic                0.004881
+                   588       fluoro_aromatic                0.004815
+                  1307       fluoro_aromatic                0.004420
+per-strategy counts: {'fluoro_aromatic': 49, 'aromatic_chloro': 15, 'sulfonamide': 2, 'amide': 2, 'carboxylic_acid': 2}
+================================================================================
+FILE: data\bace\Causal_Analysis_bace_run3.csv
+rows: 79
+columns: ['original_smiles', 'intervened_smiles', 'intervention_strategy', 'original_molecule_idx', 'original_prediction', 'intervened_prediction', 'prediction_difference', 'abs_prediction_difference', 'original_probability', 'intervened_probability', 'probability_difference', 'original_logp', 'intervened_logp', 'logp_difference']
+dtypes:
+{'original_smiles': dtype('O'), 'intervened_smiles': dtype('O'), 'intervention_strategy': dtype('O'), 'original_molecule_idx': dtype('int64'), 'original_prediction': dtype('float64'), 'intervened_prediction': dtype('float64'), 'prediction_difference': dtype('float64'), 'abs_prediction_difference': dtype('float64'), 'original_probability': dtype('float64'), 'intervened_probability': dtype('float64'), 'probability_difference': dtype('float64'), 'original_logp': dtype('float64'), 'intervened_logp': dtype('float64'), 'logp_difference': dtype('float64')}
+--- column: probability_difference ---
+dtype: float64, nulls: 0
+{'count': 79.0, 'mean': -0.00010338312462915119, 'std': 0.0022024604575131166, 'min': -0.0049433708190917, '25%': -0.0014882385730743, '50%': -7.206201553344727e-05, '75%': 0.0012934058904647502, 'max': 0.0055818855762481}
+unique_count: 79
+all_zero: False
+--- column: prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 79.0, 'mean': -0.00010338312462915119, 'std': 0.0022024604575131166, 'min': -0.0049433708190917, '25%': -0.0014882385730743, '50%': -7.206201553344727e-05, '75%': 0.0012934058904647502, 'max': 0.0055818855762481}
+unique_count: 79
+all_zero: False
+--- column: abs_prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 79.0, 'mean': 0.0017553356629383247, 'std': 0.0013194511237827166, 'min': 4.470348358154297e-05, '25%': 0.00083461403846735, '50%': 0.0014249384403228, '75%': 0.0026604384183883, 'max': 0.0055818855762481}
+unique_count: 79
+all_zero: False
+--- column: original_probability ---
+dtype: float64, nulls: 0
+{'count': 79.0, 'mean': 0.45898810029029846, 'std': 0.001917376738164052, 'min': 0.4547591805458069, '25%': 0.4577152729034424, '50%': 0.4590046405792236, '75%': 0.4601406902074814, 'max': 0.4634610116481781}
+unique_count: 79
+all_zero: False
+--- column: intervened_probability ---
+dtype: float64, nulls: 0
+{'count': 79.0, 'mean': 0.4588847171656693, 'std': 0.0017428033319724745, 'min': 0.4558939933776855, '25%': 0.45753963291645044, '50%': 0.4590174555778503, '75%': 0.45992311835289, 'max': 0.4641879498958587}
+unique_count: 79
+all_zero: False
+--- column: original_prediction ---
+dtype: float64, nulls: 0
+{'count': 79.0, 'mean': 0.45898810029029846, 'std': 0.001917376738164052, 'min': 0.4547591805458069, '25%': 0.4577152729034424, '50%': 0.4590046405792236, '75%': 0.4601406902074814, 'max': 0.4634610116481781}
+unique_count: 79
+all_zero: False
+--- column: intervened_prediction ---
+dtype: float64, nulls: 0
+{'count': 79.0, 'mean': 0.4588847171656693, 'std': 0.0017428033319724745, 'min': 0.4558939933776855, '25%': 0.45753963291645044, '50%': 0.4590174555778503, '75%': 0.45992311835289, 'max': 0.4641879498958587}
+unique_count: 79
+all_zero: False
+--- column: intervention_strategy ---
+dtype: object, nulls: 0
+non-numeric after coercion: 79 / 79
+--- column: original_molecule_idx ---
+dtype: int64, nulls: 0
+{'count': 79.0, 'mean': 797.632911392405, 'std': 384.85772186931723, 'min': 34.0, '25%': 516.5, '50%': 764.0, '75%': 1101.0, 'max': 1505.0}
+unique_count: 70
+all_zero: False
+Top abs_prediction_difference samples:
+ original_molecule_idx intervention_strategy  abs_prediction_difference
+                   527       aromatic_chloro                   0.005582
+                   527       fluoro_aromatic                   0.004943
+                   641       fluoro_aromatic                   0.004540
+                   457       fluoro_aromatic                   0.004436
+                   942       fluoro_aromatic                   0.004428
+                  1335                 amide                   0.004153
+                  1451                 amide                   0.004055
+                    34       fluoro_aromatic                   0.003692
+                   641       aromatic_chloro                   0.003671
+                   735       fluoro_aromatic                   0.003524
+Top probability_difference samples:
+ original_molecule_idx intervention_strategy  probability_difference
+                   527       aromatic_chloro                0.005582
+                   527       fluoro_aromatic               -0.004943
+                   641       fluoro_aromatic                0.004540
+                   457       fluoro_aromatic               -0.004436
+                   942       fluoro_aromatic               -0.004428
+                  1335                 amide                0.004153
+                  1451                 amide                0.004055
+                    34       fluoro_aromatic                0.003692
+                   641       aromatic_chloro               -0.003671
+                   735       fluoro_aromatic               -0.003524
+per-strategy counts: {'fluoro_aromatic': 51, 'aromatic_chloro': 20, 'amide': 4, 'carboxylic_acid': 2, 'hydroxyl': 1, 'sulfonamide': 1}
+================================================================================
+FILE: data\bace\Causal_Analysis_bace_run4.csv
+rows: 69
+columns: ['original_smiles', 'intervened_smiles', 'intervention_strategy', 'original_molecule_idx', 'original_prediction', 'intervened_prediction', 'prediction_difference', 'abs_prediction_difference', 'original_probability', 'intervened_probability', 'probability_difference', 'original_logp', 'intervened_logp', 'logp_difference']
+dtypes:
+{'original_smiles': dtype('O'), 'intervened_smiles': dtype('O'), 'intervention_strategy': dtype('O'), 'original_molecule_idx': dtype('int64'), 'original_prediction': dtype('float64'), 'intervened_prediction': dtype('float64'), 'prediction_difference': dtype('float64'), 'abs_prediction_difference': dtype('float64'), 'original_probability': dtype('float64'), 'intervened_probability': dtype('float64'), 'probability_difference': dtype('float64'), 'original_logp': dtype('float64'), 'intervened_logp': dtype('float64'), 'logp_difference': dtype('float64')}
+--- column: probability_difference ---
+dtype: float64, nulls: 0
+{'count': 69.0, 'mean': 0.00015479412631711812, 'std': 0.0013700189214519922, 'min': -0.0023578405380249, '25%': -0.0007859468460083, '50%': -6.4849853515625e-05, '75%': 0.0011323690414428, 'max': 0.0036826133728027}
+unique_count: 69
+all_zero: False
+--- column: prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 69.0, 'mean': 0.00015479412631711812, 'std': 0.0013700189214519922, 'min': -0.0023578405380249, '25%': -0.0007859468460083, '50%': -6.4849853515625e-05, '75%': 0.0011323690414428, 'max': 0.0036826133728027}
+unique_count: 69
+all_zero: False
+--- column: abs_prediction_difference ---
+dtype: float64, nulls: 0
+{'count': 69.0, 'mean': 0.0010641182678332755, 'std': 0.0008673324493905922, 'min': 3.948807716369629e-05, '25%': 0.0003285109996795, '50%': 0.0008138418197631, '75%': 0.0015272796154022, 'max': 0.0036826133728027}
+unique_count: 69
+all_zero: False
+--- column: original_probability ---
+dtype: float64, nulls: 0
+{'count': 69.0, 'mean': 0.47117855194686115, 'std': 0.0024251192049816244, 'min': 0.4665405452251434, '25%': 0.4696294665336609, '50%': 0.4710952639579773, '75%': 0.4730909168720245, 'max': 0.4764941930770874}
+unique_count: 69
+all_zero: False
+--- column: intervened_probability ---
+dtype: float64, nulls: 0
+{'count': 69.0, 'mean': 0.4713333460731783, 'std': 0.001992306500964489, 'min': 0.4662273228168487, '25%': 0.469879686832428, '50%': 0.4716814756393432, '75%': 0.4726896584033966, 'max': 0.4747927486896515}
+unique_count: 69
+all_zero: False
+--- column: original_prediction ---
+dtype: float64, nulls: 0
+{'count': 69.0, 'mean': 0.47117855194686115, 'std': 0.0024251192049816244, 'min': 0.4665405452251434, '25%': 0.4696294665336609, '50%': 0.4710952639579773, '75%': 0.4730909168720245, 'max': 0.4764941930770874}
+unique_count: 69
+all_zero: False
+--- column: intervened_prediction ---
+dtype: float64, nulls: 0
+{'count': 69.0, 'mean': 0.4713333460731783, 'std': 0.001992306500964489, 'min': 0.4662273228168487, '25%': 0.469879686832428, '50%': 0.4716814756393432, '75%': 0.4726896584033966, 'max': 0.4747927486896515}
+unique_count: 69
+all_zero: False
+--- column: intervention_strategy ---
+dtype: object, nulls: 0
+non-numeric after coercion: 69 / 69
+--- column: original_molecule_idx ---
+dtype: int64, nulls: 0
+{'count': 69.0, 'mean': 947.3333333333334, 'std': 393.4141159982274, 'min': 24.0, '25%': 652.0, '50%': 983.0, '75%': 1278.0, 'max': 1503.0}
+unique_count: 63
+all_zero: False
+Top abs_prediction_difference samples:
+ original_molecule_idx intervention_strategy  abs_prediction_difference
+                  1018       aromatic_chloro                   0.003683
+                  1497       aromatic_chloro                   0.003333
+                   976       aromatic_chloro                   0.003117
+                   831       aromatic_chloro                   0.002507
+                   527       aromatic_chloro                   0.002471
+                   676       fluoro_aromatic                   0.002368
+                  1318       carboxylic_acid                   0.002358
+                    90       fluoro_aromatic                   0.002345
+                   652       fluoro_aromatic                   0.002296
+                   519       fluoro_aromatic                   0.002103
+Top probability_difference samples:
+ original_molecule_idx intervention_strategy  probability_difference
+                  1018       aromatic_chloro                0.003683
+                  1497       aromatic_chloro                0.003333
+                   976       aromatic_chloro                0.003117
+                   831       aromatic_chloro                0.002507
+                   527       aromatic_chloro                0.002471
+                   676       fluoro_aromatic                0.002368
+                  1318       carboxylic_acid               -0.002358
+                    90       fluoro_aromatic                0.002345
+                   652       fluoro_aromatic               -0.002296
+                   519       fluoro_aromatic               -0.002103
+per-strategy counts: {'fluoro_aromatic': 39, 'aromatic_chloro': 25, 'hydroxyl': 3, 'carboxylic_acid': 2}
+
+Saved models directory: saved_models\bace
+Found 92 files in saved_models/bace
+  - 0.5069_run_0_best_model.pt  size: 27658030
+  - 0.5156_run_1_best_model.pt  size: 154791240
+  - 0.5292_run_0_best_model.pt  size: 154791240
+  - 0.5586_run_0_best_model.pt  size: 8086566
+  - 0.5603_run_1_best_model.pt  size: 154791240
+  - 0.5776_run_0_best_model.pt  size: 154791240
+  - 0.5883_run_2_best_model.pt  size: 154791240
+  - 0.5887_run_2_best_model.pt  size: 154791240
+  - 0.5934_run_3_best_model.pt  size: 154791240
+  - 0.5984_run_0_best_model.pt  size: 154791624
+  - 0.6012_run_3_best_model.pt  size: 154791240
+  - 0.6060_run_0_best_model.pt  size: 154791240
+  - 0.6075_run_1_best_model.pt  size: 154791240
+  - 0.6143_run_2_best_model.pt  size: 154791240
+  - 0.6186_run_0_best_model.pt  size: 154791240
+  - 0.6246_run_4_best_model.pt  size: 154791240
+  - 0.6248_run_2_best_model.pt  size: 154791240
+  - 0.6325_run_2_best_model.pt  size: 154791240
+  - 0.6405_run_0_best_model.pt  size: 154791240
+  - 0.6435_run_1_best_model.pt  size: 154791240
+  - 0.6451_run_4_best_model.pt  size: 154791240
+  - 0.6489_run_4_best_model.pt  size: 154791240
+  - 0.6511_run_1_best_model.pt  size: 154791240
+  - 0.6534_run_0_best_model.pt  size: 154791240
+  - 0.6572_run_3_best_model.pt  size: 154791240
+  - 0.6575_run_2_best_model.pt  size: 154791240
+  - 0.6608_run_0_best_model.pt  size: 154791240
+  - 0.6616_run_4_best_model.pt  size: 154791240
+  - 0.6630_run_0_best_model.pt  size: 154791240
+  - 0.6642_run_0_best_model.pt  size: 154791240
+  - 0.6644_run_3_best_model.pt  size: 154791240
+  - 0.6684_run_2_best_model.pt  size: 154791240
+  - 0.6731_run_4_best_model.pt  size: 154791240
+  - 0.6737_run_2_best_model.pt  size: 154791240
+  - 0.6753_run_2_best_model.pt  size: 154791240
+  - 0.6771_run_1_best_model.pt  size: 154791240
+  - 0.6808_run_1_best_model.pt  size: 154791240
+  - 0.6815_run_1_best_model.pt  size: 154791240
+  - 0.6847_run_4_best_model.pt  size: 154791240
+  - 0.6854_run_1_best_model.pt  size: 154791240
+  - 0.6857_run_0_best_model.pt  size: 154791240
+  - 0.6887_run_2_best_model.pt  size: 154791240
+  - 0.6908_run_1_best_model.pt  size: 154791240
+  - 0.6910_run_3_best_model.pt  size: 154791240
+  - 0.6928_run_3_best_model.pt  size: 154791240
+  - 0.6963_run_4_best_model.pt  size: 154791240
+  - 0.6981_run_0_best_model.pt  size: 154791624
+  - 0.6993_run_0_best_model.pt  size: 154791624
+  - 0.7077_run_0_best_model.pt  size: 154791624
+  - 0.7158_run_0_best_model.pt  size: 154791240
+  - 0.7165_run_2_best_model.pt  size: 154791240
+  - 0.7172_run_0_best_model.pt  size: 154791176
+  - 0.7175_run_4_best_model.pt  size: 154791240
+  - 0.7179_run_3_best_model.pt  size: 154791240
+  - 0.7183_run_0_best_model.pt  size: 154791496
+  - 0.7188_run_0_best_model.pt  size: 154791496
+  - 0.7189_run_1_best_model.pt  size: 154791240
+  - 0.7195_run_0_best_model.pt  size: 154791496
+  - 0.7205_run_4_best_model.pt  size: 154791240
+  - 0.7214_run_0_best_model.pt  size: 154791624
+  - 0.7222_run_4_best_model.pt  size: 154791240
+  - 0.7228_run_0_best_model.pt  size: 154791496
+  - 0.7236_run_0_best_model.pt  size: 154791624
+  - 0.7243_run_0_best_model.pt  size: 154791624
+  - 0.7247_run_0_best_model.pt  size: 154791624
+  - 0.7247_run_3_best_model.pt  size: 154791240
+  - 0.7252_run_0_best_model.pt  size: 154791624
+  - 0.7257_run_0_best_model.pt  size: 154791496
+  - 0.7297_run_0_best_model.pt  size: 154791496
+  - 0.7304_run_0_best_model.pt  size: 154791496
+  - 0.7306_run_0_best_model.pt  size: 154791624
+  - 0.7311_run_0_best_model.pt  size: 154791624
+  - 0.7323_run_0_best_model.pt  size: 154791560
+  - 0.7347_run_0_best_model.pt  size: 154791240
+  - 0.7351_run_0_best_model.pt  size: 154791496
+  - 0.7363_run_0_best_model.pt  size: 154791496
+  - 0.7363_run_3_best_model.pt  size: 154791240
+  - 0.7384_run_0_best_model.pt  size: 154791624
+  - 0.7461_run_0_best_model.pt  size: 154791496
+  - 0.7534_run_3_best_model.pt  size: 154791240
+  - 0.7647_run_0_best_model.pt  size: 154791240
+  - 0.8284_run_1_best_model.pt  size: 154791240
+  - 0.8353_run_0_best_model.pt  size: 154791240
+  - 0.8433_run_0_best_model.pt  size: 154791624
+  - 0.8454_run_0_best_model.pt  size: 154791496
+  - 0.8556_run_0_best_model.pt  size: 154791560
+  - 0.8600_run_4_best_model.pt  size: 154791240
+  - 0.8604_run_0_best_model.pt  size: 154791240
+  - 0.8620_run_0_best_model.pt  size: 65894088
+  - 0.8655_run_0_best_model.pt  size: 29920387
+  - 0.8727_run_3_best_model.pt  size: 154791240
+  - 0.9207_run_2_best_model.pt  size: 154791240
+
+merged file present: True, per-run files: 5
+merged rows: 382, sum per-run rows: 382
