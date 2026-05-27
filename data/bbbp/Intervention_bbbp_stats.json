@@ -1,0 +1,56 @@
+{
+  "total_interventions": 796,
+  "unique_original_molecules": 670,
+  "intervention_strategies": {
+    "carboxylic_acid": {
+      "count": 127,
+      "avg_qed_change": 0.04541986860990763,
+      "avg_mol_weight_change": -43.95810399741446,
+      "avg_logp_change": 0.5260011023622049,
+      "chemical_impact": null
+    },
+    "fluoro_aromatic": {
+      "count": 125,
+      "avg_qed_change": 0.01686559463992429,
+      "avg_mol_weight_change": -17.990578188000004,
+      "avg_logp_change": -0.13910000000000014,
+      "chemical_impact": null
+    },
+    "aromatic_chloro": {
+      "count": 291,
+      "avg_qed_change": 0.017762809844112222,
+      "avg_mol_weight_change": -33.961027648,
+      "avg_logp_change": -0.6534000000000006,
+      "chemical_impact": null
+    },
+    "hydroxyl": {
+      "count": 96,
+      "avg_qed_change": -0.011442533565376964,
+      "avg_mol_weight_change": -30.010564683999984,
+      "avg_logp_change": 0.6287375000000005,
+      "chemical_impact": null
+    },
+    "amide": {
+      "count": 137,
+      "avg_qed_change": -0.061084441966582304,
+      "avg_mol_weight_change": -41.77729700715327,
+      "avg_logp_change": 0.7915971532846723,
+      "chemical_impact": null
+    },
+    "sulfonamide": {
+      "count": 20,
+      "avg_qed_change": 0.029996343038094037,
+      "avg_mol_weight_change": -78.97279927199999,
+      "avg_logp_change": 1.3319459999999999,
+      "chemical_impact": null
+    }
+  },
+  "chemical_property_stats": {
+    "logp_change": {
+      "mean": 0.06874594221105522,
+      "std": 0.6698556477577451,
+      "min": -0.6534000000000022,
+      "max": 1.8814999999999993
+    }
+  }
+}
